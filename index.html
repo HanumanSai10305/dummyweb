@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dummy Homepage</title>
+  <title>Gallabox Dummy Website</title>
 
   <style>
     * {
@@ -14,222 +14,301 @@
     }
 
     body {
-      background: linear-gradient(to bottom right, #eef2ff, #dbeafe);
+      background: linear-gradient(to bottom right, #f8fafc, #e0f2fe);
       color: #1f2937;
     }
+
+    /* Header */
 
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
+      padding: 20px 50px;
       background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
-      color: #4f46e5;
+      color: #0ea5e9;
     }
 
     .nav {
       display: flex;
-      gap: 20px;
+      gap: 25px;
     }
 
     .nav a {
       text-decoration: none;
       color: #374151;
       font-weight: 500;
-    }
-
-    .nav a:hover {
-      color: #4f46e5;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 56px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      color: #6b7280;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .buttons {
-      margin-top: 30px;
-    }
-
-    button {
-      padding: 14px 28px;
-      border: none;
-      border-radius: 12px;
-      margin: 10px;
-      cursor: pointer;
-      font-size: 16px;
       transition: 0.3s;
     }
 
+    .nav a:hover {
+      color: #0ea5e9;
+    }
+
+    /* Hero Section */
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 25px;
+      color: #111827;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 20px;
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+
+    button {
+      padding: 15px 32px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+      transition: 0.3s ease;
+    }
+
     .primary-btn {
-      background: #4f46e5;
+      background: #0ea5e9;
       color: white;
     }
 
     .primary-btn:hover {
-      background: #4338ca;
+      background: #0284c7;
+      transform: translateY(-2px);
     }
 
     .secondary-btn {
       background: white;
-      border: 1px solid #ccc;
+      border: 1px solid #d1d5db;
     }
 
     .secondary-btn:hover {
       background: #f3f4f6;
     }
 
+    /* Features */
+
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-      padding: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
       max-width: 1200px;
       margin: auto;
     }
 
     .card {
       background: white;
-      padding: 30px;
+      padding: 35px;
       border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
     }
 
     .card h3 {
-      margin: 15px 0;
+      margin-bottom: 15px;
+      font-size: 24px;
     }
 
     .card p {
       color: #6b7280;
+      line-height: 1.6;
     }
 
+    /* CTA */
+
     .cta {
-      margin: 60px 40px;
-      background: #4f46e5;
+      margin: 80px 40px;
+      background: #0ea5e9;
       color: white;
-      padding: 70px 20px;
+      padding: 80px 20px;
       text-align: center;
       border-radius: 30px;
     }
 
     .cta h2 {
-      font-size: 40px;
+      font-size: 42px;
+      margin-bottom: 20px;
     }
 
     .cta p {
-      margin-top: 15px;
-      color: #e0e7ff;
+      font-size: 18px;
+      color: #e0f2fe;
     }
+
+    /* Footer */
 
     .footer {
       text-align: center;
       background: white;
-      padding: 20px;
-      margin-top: 40px;
-      border-top: 1px solid #ddd;
+      padding: 25px;
+      border-top: 1px solid #e5e7eb;
       color: #6b7280;
+      margin-top: 40px;
     }
 
+    /* Responsive */
+
     @media (max-width: 768px) {
+
       .header {
         flex-direction: column;
         gap: 15px;
       }
 
       .hero h1 {
-        font-size: 38px;
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
+
   </style>
 </head>
+
 <body>
 
+  <!-- Header -->
+
   <header class="header">
-    <div class="logo">DemoBrand</div>
+
+    <div class="logo">Gallabox</div>
 
     <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Solutions</a>
+      <a href="#">Pricing</a>
+      <a href="#">Resources</a>
       <a href="#">Contact</a>
     </nav>
+
   </header>
 
+  <!-- Hero Section -->
+
   <section class="hero">
-    <h1>Build Amazing Digital Experiences</h1>
+
+    <h1>Automate WhatsApp Conversations with Gallabox</h1>
 
     <p>
-      A modern dummy homepage created using HTML, CSS, and JavaScript.
-      Perfect for beginners, demos, and project templates.
+      Boost customer engagement, automate support, generate leads,
+      and grow your business using powerful WhatsApp automation tools.
     </p>
 
     <div class="buttons">
-      <button class="primary-btn" onclick="showMessage()">Get Started</button>
-<button class="secondary-btn" onclick="window.location.href='secondpage.html'">
-  Learn More
-</button>
+
+      <button class="primary-btn" onclick="showMessage()">
+        Start Free Trial
+      </button>
+
+      <button class="secondary-btn"
+        onclick="window.location.href='secondpage.html'">
+        Watch Demo
+      </button>
+
     </div>
+
   </section>
+
+  <!-- Features -->
 
   <section class="features">
+
     <div class="card">
-      <h3>⚡ Fast Performance</h3>
-      <p>Optimized structure with smooth UI and responsiveness.</p>
+      <h3>💬 WhatsApp Automation</h3>
+
+      <p>
+        Automate replies, workflows, and customer conversations instantly.
+      </p>
     </div>
 
     <div class="card">
-      <h3>🎨 Modern Design</h3>
-      <p>Clean and modern user interface using pure CSS.</p>
+      <h3>📈 Lead Management</h3>
+
+      <p>
+        Capture, track, and organize customer leads efficiently in one place.
+      </p>
     </div>
 
     <div class="card">
-      <h3>🔒 Secure Platform</h3>
-      <p>Simple and scalable frontend structure for projects.</p>
+      <h3>🤖 AI Chatbots</h3>
+
+      <p>
+        Deploy AI-powered chatbots to automate support and sales operations.
+      </p>
     </div>
+
   </section>
+
+  <!-- CTA -->
 
   <section class="cta">
-    <h2>Ready to Launch Your Project?</h2>
-    <p>Start building your next website with this dummy template.</p>
 
-    <button class="secondary-btn">Start Now</button>
+    <h2>Scale Your Customer Communication</h2>
+
+    <p>
+      Build meaningful customer experiences with Gallabox automation.
+    </p>
+
+    <button class="secondary-btn"
+      onclick="window.location.href='secondpage.html'">
+      Book a Demo
+    </button>
+
   </section>
 
+  <!-- Footer -->
+
   <footer class="footer">
-    © 2026 DemoBrand. All rights reserved.
+    © 2026 Gallabox Demo Website. All rights reserved.
   </footer>
 
+  <!-- JavaScript -->
+
   <script>
+
     function showMessage() {
-      alert("Welcome to DemoBrand Website!");
+      alert("Welcome to Gallabox Demo Website!");
     }
+
   </script>
+
+    
 <script>
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiaHR0cHM6Ly9wYXJhbW91bnR6b25lLmFlLyIsImlkIjoiNmEwNDQ5YjE0OTYzM2Q1ZGUxNzVmYTA4IiwiYWNjSWQiOiI2NjNhMjJkYmY4OGU3MTI5NmZjNWFjZWQiLCJpYXQiOjE3Nzg3NjEzNzJ9.fNOx3mo2MVhmWbmKSwMdKrsF4u70XsT3Btx_E_Me62Q";
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiaHR0cHM6Ly9wYW50aGVvbi5hZS8iLCJpZCI6IjY5ZjAzODJmMThiMjExMzFlMjJmYWQ0MiIsImFjY0lkIjoiNjYzYTI3OTE4NmU5ODAyMWZlMzU0NTRlIiwiaWF0IjoxNzc4NjY1MDI4fQ.x_IiIP2byeKnV2zAYaqMaxT7K8xg2fA6P54rHqXl0kg";
   (function(w, d, s, u, t) {
     w.Chatty = function(c) { w.Chatty._.push(c) };
     w.Chatty._ = [];
